@@ -1,0 +1,94 @@
+@import url('reset.less');
+@import (reference) 'colors.less';
+@import  url('typography.less');
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+.floor-panel{
+	float: left;
+}
+.floor-container{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+}
+.info-modal{
+	background: rgba(0, 0, 0, 0);
+	box-shadow: 0 0 0 transparent;
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 35px 30px 15px;
+	transition: background 0.4s ease-out;
+	transform: translate(-50%, -50%);
+	height: 50%;
+	width: 40%;
+
+
+	.control-buttons-container{
+		border-radius: 5px;
+		margin: 0 0 20px;
+		height: 35px;
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 80%;
+
+
+		li{
+
+			float: left;
+			height: 100%;
+			width: 50%;
+
+			a{
+				background: rgba(0, 0, 0, 0);
+				display: block;
+				height: 100%;
+				width: 100%;
+
+			}
+		}
+	}
+
+	&:hover{
+		box-shadow: 0 0 15px @grey;
+		background: @yellow;
+		background: @yellow-opacity;
+		transition: background 0.4s ease-in;
+
+		.control-buttons-container{
+			li{
+				&:nth-child(1){
+					a{
+						background: @green;
+						border-radius: 5px 0 0 5px;
+					}
+				}
+
+				&:nth-child(2){
+					a{
+						background: @red;
+						border-radius: 0 5px 5px 0;				
+					}
+				}
+			}
+		}
+	}
+
+	.copyright{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 10px;
+	}
+}
